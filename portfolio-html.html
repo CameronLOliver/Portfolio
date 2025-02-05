@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="portfolio-style.css" />
+    <title>Pesonal Portfolio</title>
+    <script src="https://kit.fontawesome.com/6c37576885.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" />
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Game Designer/ Web developer</p>
+                <h1>Hi, I'm <span>Cameron</span><br /><span>Oliver </span>from Texas</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-----about------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="images/me.jpeg" /></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I play league of legends and practice web development</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br />Web Application Development</li>
+                            <li><span>Game Design</span><br />Designing Video Game and Applications</li>
+                            <li><span>Web Design</span><br />Responsive Web Design</li>
+                            <li><span>C++</span><br />Game Development: Beginner Level</li>
+                            <li><span>Python</span><br />Game Development: Beginner Level</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021</span><br />Assisting in Web Design/Development to Build a Website Using Ghost</li>
+                            <li><span>2022</span><br />Design/Develop Personal Hobby Website on Notepad</li>
+                            <li><span>2023</span><br />Design/Develop Personal Portfolio Using HTML/CSS</li>
+                            <li><span>2024</span><br />Built a Survey Form and Documentation Page Using HTML/CSS</li>
+                            <li><span>2024</span><br />Starting a Python Course on Udemy</li>
+                            <li><span>2025</span><br />Working on Learning Web Design Using Adobe, Figma, and Canva</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017-2018</span><br />High School Diploma from Elkhart High School</li>
+                            <li><span>2018-2022</span><br />Software Development and Game Design AAS Degree from Kilgore College</li>
+                            <li><span>2022-present</span><br />Working on FreeCodeCamp, Udemy, Odin Project certificates.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--services-->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-wand-sparkles"></i>
+                    <h2>Web Development</h2>
+                    <p>I will bring your ideas to life!</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crow"></i>
+                    <h2>Game/Web Design</h2>
+                    <p>Assist in designs to meet your needs and expectations.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-skull"></i>
+                    <h2>Crochet</h2>
+                    <p>I can make almost anything out of yarn.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----portfolio---->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+        </div>
+    </div>
+    
+    <!----script---->
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
